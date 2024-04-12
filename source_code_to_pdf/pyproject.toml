@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "source_code_to_pdf"
+version = "0.1.0"
+description = ""
+authors = ["David Piper <dbpiper@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.scripts]
+convert = "source_code_to_pdf:main"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pandas = "^2.1.4"
+numpy = "^1.26.3"
+pydash = "^7.0.7"
+einops = "^0.7.0"
+tenacity = "^8.2.3"
+tqdm = "^4.66.2"
+fpdf2 = "^2.7.8"
+pathspec = "^0.12.1"
+
+
+[[tool.poetry.source]]
+name = "PyPI"
+priority = "primary"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
