@@ -6,7 +6,10 @@ authors = ["David Piper <dbpiper@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.scripts]
-convert = "source_code_to_pdf:main"
+souce_code_to_pdf = "source_code_to_pdf:main"
+create_multiple_pdfs = "source_code_to_pdf:create_multiple_pdfs"
+combine_pdfs = "source_code_to_pdf:combine_pdfs_script"
+combine_pdfs_with_resume = "source_code_to_pdf:combine_pdfs_with_resume_script"
 
 [tool.poetry.dependencies]
 python = "^3.11"
@@ -18,6 +21,7 @@ tenacity = "^8.2.3"
 tqdm = "^4.66.2"
 fpdf2 = "^2.7.8"
 pathspec = "^0.12.1"
+pypdf2 = "^3.0.1"
 
 
 [[tool.poetry.source]]

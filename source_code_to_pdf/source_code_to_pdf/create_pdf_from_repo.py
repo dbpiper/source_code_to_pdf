@@ -5,7 +5,7 @@ from .load_gitignore import load_gitignore
 
 
 # Function to create a PDF for a single repository
-def create_pdf_from_repo(repo_path, repo_name):
+def create_pdf_from_repo(repo_path) -> FPDF:
     pdf = FPDF()
     pdf.set_auto_page_break(auto=True, margin=15)
     spec: PathSpec = load_gitignore(repo_path)
@@ -35,5 +35,4 @@ def create_pdf_from_repo(repo_path, repo_name):
             except Exception as e:
                 print(f"Failed to add {file_path}: {e}")
 
-    # Save the PDF named after the repository
-    pdf.output(f"{repo_name}.pdf")
+    return pdf
